@@ -14,7 +14,7 @@ pipeline {
               sh "mvn clean install"
             }
         }
-        stage("deployment"){
+        /* stage("deployment"){
             steps{
              // sshagent(['deploy_user'])
                 { 
@@ -22,6 +22,6 @@ pipeline {
                  
                 }
             }
-        }
+        } */
     }
 }
