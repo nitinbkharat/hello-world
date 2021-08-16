@@ -14,7 +14,7 @@ pipeline {
               sh "mvn clean install"
             }
         }
-        stage("deploy"){
+        stage("deployment"){
             steps{
               sshagent(['deploy_user']) {
                  sh "scp -o StrictHostKeyChecking=no webapp/target/webapp.war root@3.108.66.110:/var/lib/tomcat9/webapps"
