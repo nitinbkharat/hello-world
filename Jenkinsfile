@@ -16,7 +16,7 @@ pipeline {
         }
         stage("deployment"){
             steps{
-              sshagent(['deploy_user']) {
+             // sshagent(['deploy_user']) { 
                 sh "scp -o StrictHostKeyChecking=no webapp/target/*.war root@3.108.66.110:/var/lib/tomcat9/webapps"
                  
                 }
